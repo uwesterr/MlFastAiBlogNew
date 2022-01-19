@@ -1,0 +1,87 @@
+<h1 id="working-with-fastpages-github-and-colab">Working with fastpages, GitHub and Colab</h1>
+
+<hr />
+<p>The idea is to work with Jupyter Notebook in Colab, the notebook is part of a Fastpages blog and should be edited either in Colab or VS Code</p>
+
+<ul>
+  <li>write a Blog in Fastpages</li>
+  <li>format of Blog is Jupyter Notebook</li>
+  <li>run the Notebook in Colab</li>
+  <li>also edit in VS Code is necessary
+    <ul>
+      <li>use Git to synchronize GitHub repo with VS Code local copy</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="write-a-blog-with-fastpages">Write a blog with Fastpages</h2>
+
+<p>A detailed instruction on how to write Fastpage blogs is given at</p>
+
+<ul>
+  <li><a href="https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter">for juypter notebooks </a></li>
+  <li><a href="https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter">for markdown</a></li>
+</ul>
+
+<h2 id="working-with-notebook-in-colab">Working with notebook in Colab</h2>
+
+<p>Once the blog is opened there are buttons</p>
+
+<ul>
+  <li>View on GitHub
+  The Jupyter Notbeook file is opened in the GitHub environment</li>
+  <li>Open in Colab
+  The Jupyter Notbeook file is opened in the Colab environment <sup id="fnref:colabNote" role="doc-noteref"><a href="#fn:colabNote" class="footnote" rel="footnote">1</a></sup></li>
+</ul>
+
+<p>In the Colab environment the file can be run with <strong>GPU</strong> support. An intro to <strong>Colab</strong> is given <a href="https://colab.research.google.com/notebooks/welcome.ipynb">here</a></p>
+
+<p>To save the changes chose under <strong>“File”</strong> the option <strong>“Save a copy in GitHub”</strong> as shown below</p>
+
+<hr />
+
+<p><img src="/images/colabSaveGithubCopy.png" alt="" title="Save copy to GitHub from within Colab" /></p>
+
+<hr />
+
+<p>Colab will open a dialog as shown below
+It might be that it asks for your GitHub credentials before opening the dialog</p>
+
+<hr />
+
+<p><img src="/images/colabAskPermissionGitHub.png" alt="" title="Colab asks for permission to save to GitHub" /></p>
+
+<hr />
+
+<h2 id="working-with-vs-code">Working with VS Code</h2>
+
+<p>To work with the Fastpages blog clone the repository as described <a href="https://code.visualstudio.com/docs/editor/versioncontrol#_cloning-a-repository">here</a></p>
+
+<p>It is then easy to synchronize with GitHub, note, don’t forget to pull the repo once you saved a notebook version from Colab to GitHub.</p>
+
+<h3 id="avoid-conflicting-versions">Avoid conflicting versions</h3>
+
+<p>If you do the following</p>
+
+<ul>
+  <li>Change file in Colab</li>
+  <li>Save to GitHub</li>
+  <li>Change same file in VS</li>
+  <li>Try to push</li>
+</ul>
+
+<p>You will have *conflicts in the file** and need command line magic to solve the issue. I ended up setting the whole blog up from scratch.</p>
+
+<p>Better: use <strong>Git: Snyc</strong> which does a <strong>Git: Pull</strong> first and then a <strong>Git: Push</strong></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:colabNote" role="doc-endnote">
+      <p>Anybody can open a copy of any github-hosted notebook within Colab just add for markup<br />
+<code class="language-plaintext highlighter-rouge">[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)</code><br />
+or for html<br />
+<code class="language-plaintext highlighter-rouge">&lt;a href="https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb"&gt;
+&lt;img src="https://colab.research.google.com/assets/colab-badge.   svg" alt="Open In Colab"/&gt;
+&lt;/a&gt;</code> <a href="#fnref:colabNote" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
